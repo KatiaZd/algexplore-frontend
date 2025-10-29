@@ -33,4 +33,10 @@ export class LieuService {
       map((response) => response.items)
     );
   }
+  
+  getLieuById(id: number): Observable<Lieu> {
+  return this.http.get<Lieu>(`${this.apiUrl}/${id}`);
 }
+
+}
+
