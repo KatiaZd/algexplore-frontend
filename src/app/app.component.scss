@@ -1,0 +1,47 @@
+@import '../styles/variables';
+
+header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+        .logo img {
+            height: clamp(10px, 4vw, 32px);
+            width: auto;
+            display: block;     
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            margin-right: 15px;
+            cursor: pointer;
+            line-height: 1;
+            img {
+                height: clamp(14px, 4vw, 28px);
+                width: auto;
+            }
+        }
+}
+
+// Destkop
+
+@media screen and (min-width: $bp-desktop) {
+    header {
+        height: 80px;
+
+        .logo img {
+            height: clamp(24px, 2vw, 40px);
+            margin-left: 32px;
+        }
+    }
+}
