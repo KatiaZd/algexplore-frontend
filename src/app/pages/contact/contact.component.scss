@@ -1,21 +1,21 @@
- @import '../../../styles/variables';
+@use '../../../styles/variables' as *;
 
-section {  
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 20px;
-    line-height: 1.6;
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  line-height: 1.6;
 
-    h1 {
-        text-align: center;
-        font-size: 1.8rem;
-        margin-bottom: 24px;
-        font-weight: 600;
-        color: $kaki;
-    }
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: $kaki;
+  }
 
-    p {
-        margin-bottom: 12px;
-        text-align: center;
-    }
+  p {
+    margin-bottom: 12px;
+    text-align: center;
+  }
 }

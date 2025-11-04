@@ -1,51 +1,51 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 
 /* -- HEADER -- */
 
 header {
-    height: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .logo img {
+    height: clamp(10px, 4vw, 32px);
+    width: auto;
+    display: block;
+  }
+
+  .icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-   
-        .logo img {
-            height: clamp(10px, 4vw, 32px);
-            width: auto;
-            display: block;     
-        }
+    gap: 5px;
+  }
 
-        .icons {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            margin-right: 15px;
-            cursor: pointer;
-            line-height: 1;
-            img {
-                height: clamp(14px, 4vw, 28px);
-                width: auto;
-            }
-        }
+  .icon-btn {
+    background: none;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+    line-height: 1;
+    img {
+      height: clamp(14px, 4vw, 28px);
+      width: auto;
+    }
+  }
 }
 
 /* Header Destkop */
 
 @media screen and (min-width: $bp-desktop) {
-    header {
-        height: 80px;
+  header {
+    height: 80px;
 
-        .logo img {
-            height: clamp(24px, 2vw, 40px);
-            margin-left: 32px;
-        }
+    .logo img {
+      height: clamp(24px, 2vw, 40px);
+      margin-left: 32px;
     }
+  }
 }
 
 /* -- FOOTER -- */
@@ -57,10 +57,10 @@ header {
 }
 
 .footer__logo {
-    cursor: pointer;
+  cursor: pointer;
 }
-    img { 
-    height: 28px; 
+img {
+  height: 28px;
 }
 
 .footer__nav {
@@ -69,16 +69,16 @@ header {
   gap: 12px;
   margin: 16px 0px;
 
-    a {
-        font-size: 16px;
-        color: $black;
-        text-decoration: none;
-        cursor: pointer;
-    
-        &:hover {
-        text-decoration: underline;
-        }
+  a {
+    font-size: 16px;
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
 
 .footer__social {
@@ -105,25 +105,25 @@ header {
     // row-gap: 10px;
   }
 
-  .footer__logo { 
-    justify-self: start; 
-    }
+  .footer__logo {
+    justify-self: start;
+  }
 
   .footer__nav {
     flex-direction: row;
-    gap: 32px;            
-    justify-self: center; 
+    gap: 32px;
+    justify-self: center;
     margin: 0;
   }
 
   .footer__social {
-    justify-self: end;   
+    justify-self: end;
     gap: 14px;
     margin: 0;
   }
 
   .footer__copy {
-    grid-column: 1 / -1;  
+    grid-column: 1 / -1;
     justify-self: center;
     margin-top: 8px;
   }
