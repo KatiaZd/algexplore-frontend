@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LieuService, Lieu } from '../../services/lieu.service';
 import { SectionCarouselComponent } from '../../components/section-carousel/section-carousel.component';
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   isLoading = true;
   hasError = false;
 
-  constructor(private lieuService: LieuService) {}
+  private lieuService = inject(LieuService);
 
   ngOnInit(): void {
     this.lieuService.getLieux().subscribe({

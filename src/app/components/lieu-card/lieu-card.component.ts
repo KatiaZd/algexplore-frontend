@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Lieu } from '../../services/lieu.service';
@@ -13,7 +13,7 @@ import { Lieu } from '../../services/lieu.service';
 export class LieuCardComponent {
   @Input() lieu!: Lieu;
 
-  constructor(private router: Router) {}
+  private router = inject(Router);
 
   goToDetail(): void {
     // sécurité : si pas d'id, on fait rien
