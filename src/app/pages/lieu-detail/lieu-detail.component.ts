@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LieuService, Lieu } from '../../services/lieu.service';
@@ -15,11 +15,9 @@ export class LieuDetailComponent implements OnInit {
   isLoading = true;
   hasError = false;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private lieuService: LieuService
-  ) {}
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private lieuService = inject(LieuService);
 
   ngOnInit(): void {
     // Récupère l'id dans l'URL

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
@@ -12,7 +12,7 @@ export interface Lieu {
   prixEnfant?: string | null;
 }
 
-// on décrit la forme réelle renvoyée par ton backend
+// on décrit la forme réelle renvoyée par le backend
 interface LieuxApiResponse {
   items: Lieu[];
   page: number;
@@ -26,7 +26,7 @@ interface LieuxApiResponse {
 export class LieuService {
   private apiUrl = 'http://localhost:3000/lieux';
 
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   getLieux(): Observable<Lieu[]> {
     return this.http.get<LieuxApiResponse>(this.apiUrl).pipe(
@@ -35,8 +35,8 @@ export class LieuService {
   }
   
   getLieuById(id: number): Observable<Lieu> {
-  return this.http.get<Lieu>(`${this.apiUrl}/${id}`);
-}
+    return this.http.get<Lieu>(`${this.apiUrl}/${id}`);
+  }
 
 }
 
