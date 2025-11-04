@@ -5,7 +5,8 @@
   (click)="goToDetail()"
   (keyup.enter)="goToDetail()"
   (keyup.space)="goToDetail()"
-  aria-label="Voir le détail du lieu {{ lieu.nom }}"
+  [attr.aria-label]="'Voir le détail du lieu ' + lieu.nom"
+
 >
   <img
     src="https://via.placeholder.com/300x200"
