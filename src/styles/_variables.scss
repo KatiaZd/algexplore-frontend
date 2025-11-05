@@ -1,11 +1,11 @@
 /* Couleurs */
-$white: #FFFFFF;
-$black: #000000;         
-$kaki: #636C2F;
-$beige: #FEF8F2;
+$white: #ffffff;
+$black: #000000;
+$kaki: #636c2f;
+$beige: #fef8f2;
 
 /* Typographie */
-$font :'Montserrat', sans-serif;
+$font: 'Montserrat', sans-serif;
 
 /* Border-radius */
 $radius-soft: 5px;
@@ -16,3 +16,18 @@ $bp-mobile: 480px;
 $bp-tablet: 768px;
 $bp-desktop: 1024px;
 $bp-large: 1440px;
+
+/* Button */
+@mixin button-cta {
+  display: inline-block;
+  background-color: $kaki;
+  color: $white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.3rem;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}

@@ -5,6 +5,7 @@ import { LieuDetailComponent } from './pages/lieu-detail/lieu-detail.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confidentialite/politique-de-confidentialite.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 export const routes: Routes = [
@@ -18,5 +19,6 @@ export const routes: Routes = [
     { path: 'politique-de-confidentialite', component: PolitiqueDeConfidentialiteComponent },
     { path: 'contact', component: ContactComponent },
 
-    { path: '**', redirectTo: '' }
+    // { path: '**', redirectTo: '' },
+    { path: '**', component: NotFoundComponent },
 ];
